@@ -1,3 +1,4 @@
+import { Text } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
 import { ImageBackground } from "react-native";
@@ -14,7 +15,9 @@ const Untitled1 = () => {
       flex: 1
     }}><Pressable onPress={() => {
         navigation.navigate("manyRows", {});
-      }}><ImageBackground style={styles.IJBzqiGP} source={require("./Recipeful(2).png")} resizeMode="cover"></ImageBackground></Pressable></ScrollView>
+      }}><ImageBackground style={styles.IJBzqiGP} source={require("./Recipeful(2).png")} resizeMode="cover"><Pressable onPress={() => {
+            navigation.navigate("manyRows");
+          }}><Text style={styles.efOCCzTo}>Next</Text></Pressable></ImageBackground></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -28,6 +31,18 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: -10,
     top: 97
+  },
+  efOCCzTo: {
+    width: 100,
+    height: 50,
+    lineHeight: 50,
+    fontSize: 29,
+    borderRadius: 0,
+    position: "absolute",
+    left: 129.5,
+    top: 293,
+    textAlign: "center",
+    color: "#ffffff"
   }
 });
 export default Untitled1;
